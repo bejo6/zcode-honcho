@@ -1,0 +1,17 @@
+{
+  "name": "zcode-honcho",
+  "version": "0.2.0",
+  "description": "Honcho persistent memory for ZCode — Hermes/dsh-aligned: capture every turn, inject with TTL refresh + dialectic cadence, plus honcho_search/honcho_chat/honcho_remember tools.",
+  "author": { "name": "zcode-honcho" },
+  "homepage": "https://honcho.dev",
+  "license": "MIT",
+  "skills": "./skills",
+  "commands": "./commands",
+  "hooks": "./hooks",
+  "mcpServers": {
+    "honcho": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"]
+    }
+  }
+}

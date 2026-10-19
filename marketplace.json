@@ -1,0 +1,23 @@
+{
+  "name": "zcode-honcho",
+  "description": "Honcho persistent memory for ZCode",
+  "pluginRoot": "plugins",
+  "plugins": [
+    {
+      "name": "zcode-honcho",
+      "source": "./zcode-honcho",
+      "version": "0.2.0",
+      "description": "Honcho persistent memory for ZCode — Hermes/dsh-aligned: capture every turn, inject with TTL refresh + dialectic cadence, plus search/chat/remember tools.",
+      "displayName": "Honcho Memory",
+      "category": "productivity",
+      "displayName_i18n": {
+        "zh-CN": "Honcho 记忆",
+        "id-ID": "Memori Honcho"
+      },
+      "description_i18n": {
+        "zh-CN": "为 ZCode 提供持久的 Honcho 记忆：每轮捕获、TTL 刷新注入、辩证节奏，以及搜索/提问/记住工具",
+        "id-ID": "Memori Honcho persisten untuk ZCode: capture tiap turn, inject TTL + dialectic, dan tool cari/tanya/simpan."
+      }
+    }
+  ]
+}

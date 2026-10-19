@@ -1,0 +1,56 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/session-start.mjs"],
+            "timeoutMs": 20000,
+            "statusMessage": "Honcho: loading memory…"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/capture.mjs", "user"],
+            "timeoutMs": 15000,
+            "statusMessage": "Honcho: memory…"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/capture.mjs", "assistant"],
+            "timeoutMs": 30000,
+            "statusMessage": "Honcho: syncing memory…"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/capture.mjs", "tool"],
+            "timeoutMs": 10000
+          }
+        ]
+      }
+    ]
+  }
+}
