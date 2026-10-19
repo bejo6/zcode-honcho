@@ -4,11 +4,10 @@
   "owner": {
     "name": "zcode-honcho contributors"
   },
-  "pluginRoot": "plugins",
   "plugins": [
     {
       "name": "zcode-honcho",
-      "source": "./zcode-honcho",
+      "source": "./plugins/zcode-honcho",
       "version": "0.2.0",
       "description": "Honcho persistent memory for ZCode — Hermes/dsh-aligned: capture every turn, inject with TTL refresh + dialectic cadence, plus search/chat/remember tools.",
       "category": "productivity"
